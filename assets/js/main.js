@@ -13,7 +13,7 @@ fetch('https://picsum.photos/v2/list')
         console.log(userArr);
 
         const imgContainer = document.body.querySelector('#img_container');
-        imgContainer.style.padding = '10px';
+        imgContainer.style.padding = '20px';
 
         userArr.forEach(singleElement => {
 
