@@ -2,7 +2,7 @@
 //        JS API / Fetch
 // *****************************
 
-fetch('https://picsum.photos/v2/lit')
+fetch('https://picsum.photos/v2/list')
     .then(response => {
     if (!response.ok) {
         throw new Error('Fehler beim Abrufen der Daten');
