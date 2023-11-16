@@ -9,13 +9,13 @@ fetch('https://picsum.photos/v2/list')
     }
     return response.json();
     })
-    .then(userArr => {
-        console.log(userArr);
+    .then(listArr => {
+        console.log(listArr);
 
         const imgContainer = document.body.querySelector('#img_container');
         imgContainer.style.padding = '20px';
 
-        userArr.forEach(singleElement => {
+        listArr.forEach(singleElement => {
             const figure = document.createElement('figure');
             figure.classList.add('img_item');
 
