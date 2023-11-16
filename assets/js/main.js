@@ -4,10 +4,10 @@
 
 fetch('https://picsum.photos/v2/list')
     .then(response => {
-    if (!response.ok) {
-        throw new Error('Fehler beim Abrufen der Daten');
-    }
-    return response.json();
+        if (!response.ok) {
+            throw new Error('Fehler beim Abrufen der Daten');
+        }
+        return response.json();
     })
     .then(listArr => {
         console.log(listArr);
@@ -30,15 +30,15 @@ fetch('https://picsum.photos/v2/list')
             btn.textContent = 'Mehr anzeigen';
 
             btn.addEventListener('click', () => {
-            if (singleElement.url) {
-                window.open(singleElement.url, '_blank');
-            } else {
-                alert('URL nicht verfügbar');
-            }
+                if (singleElement.url) {
+                    window.open(singleElement.url, '_blank');
+                } else {
+                    alert('URL nicht verfügbar');
+                }
             });
 
             imgContainer.appendChild(figure);
             figure.append(img, figcaption, btn);
         });
     })
-    .catch(error => console.error('Fehler:', error.message || 'Unbekannter Fehler'));
+    .catch(error => console.error('Fehler:', error.message));
