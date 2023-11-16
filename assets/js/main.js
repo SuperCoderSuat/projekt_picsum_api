@@ -41,4 +41,4 @@ fetch('https://picsum.photos/v2/list')
             figure.append(img, figcaption, btn);
         });
     })
-    .catch(error => console.error('Fehler:', error.message));
+    .catch(error => console.error('Fehler:', error.message || 'Unbekannter Fehler'));
